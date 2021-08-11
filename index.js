@@ -10,23 +10,34 @@ document.addEventListener('scroll', function () {
 		}
 		if (window.innerHeight < getElementDistance) {
 			targetElement[i].classList.remove('show');
-			document.getElementById('modal').classList.remove('active');
-			document.getElementById('mask').classList.remove('active');
+			$('.js-modal').fadeOut();
+			$('.mask').fadeOut();
 		}
 	}
 });
 
-document.getElementById('modalOpen').addEventListener('click', function () {
-	document.getElementById('modal').classList.add('active');
-	document.getElementById('mask').classList.add('active');
-});
-
-document.getElementById('modalClose').addEventListener('click', function () {
-	document.getElementById('modal').classList.remove('active');
-	document.getElementById('mask').classList.remove('active');
-});
-
-document.getElementById('mask').addEventListener('click', function () {
-	document.getElementById('modal').classList.remove('active');
-	document.getElementById('mask').classList.remove('active');
+$(function () {
+	$('.modalOpen').each(function () {
+		$(this).on('click', function () {
+			var target = $(this).data('target');
+			var modal = document.getElementById(target);
+			$(modal).fadeIn();
+			$('.mask').fadeIn();
+			//document.getElementById('mask').classList.add('active');
+			return false;
+		});
+	});
+	$('.modalClose').on('click', function () {
+		$('.js-modal').fadeOut();
+		$('.mask').fadeOut();
+		//document.getElementById('modal').classList.remove('active');
+		//document.getElementById('mask').classList.remove('active');
+		return false;
+	});
+	document.getElementById('mask').addEventListener('click', function () {
+		$('.js-modal').fadeOut();
+		$('.mask').fadeOut();
+		//document.getElementById('mask').classList.remove('active');
+		return false;
+	});
 });
