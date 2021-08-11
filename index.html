@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="ja">
 	<head>
-		<meta charset="UTF-8">
+		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<title>Portfolio</title>
+		<title>Ryosuke Kai</title>
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"
 		/>
 		<link rel="stylesheet" href="style.css" />
 		<script src="index.js" defer></script>
+		<script src="jquery.min.js"></script>
 	</head>
 
 	<body>
@@ -26,7 +27,7 @@
 						<li><a href="#">Top</a></li>
 						<li><a href="#Servise">Servise</a></li>
 						<li><a href="#Works">Works</a></li>
-						<li><a href="#Others">Others</a></li>
+						<!-- <li><a href="#Others">Others</a></li> -->
 					</ul>
 				</div>
 			</nav>
@@ -37,7 +38,7 @@
 				<div id="site_logo">
 					<img src="img/logo/tree.jpg" />
 				</div>
-				<h1>Portforio</h1>
+				<h1>Ryosuke Kai</h1>
 			</div>
 		</header>
 
@@ -52,27 +53,27 @@
 							<h3>リサーチ</h3>
 							<h4>Research</h4>
 							<img src="img/Servise/glass.jpg" />
-							<!-- <p>
+							<p>
 								流行・経済・市場同行などあらゆる側面から状況を把握し、現状の問題点を洗い出し、より解決に近づけるように最大限のアプローチをさせていただきます。
-							</p> -->
+							</p>
 						</div>
 						<div class="Servise_box">
 							<h3>コーディング</h3>
 							<h4>Cording</h4>
 							<img src="img/Servise/cording.jpg" />
-							<!-- <p>
+							<p>
 								見やすいサイトやエンドユーザーの使いやすさに考慮し作成致します。
-								SEO対策も重要ですが、定期的なアップデートを行いユーザーにあったサイトを作成することで、新規の方はもちろん、既存のお客様に満足いただけるサイト作りを行います。
-							</p> -->
+								SEO対策も重要ですが、定期的なアップデートを行いユーザーにあったサイトを作成することで、利用者に満足いただけるサイト作りを行います。
+							</p>
 						</div>
 						<div class="Servise_box">
 							<h3>ディレクション</h3>
 							<h4>Direction</h4>
 							<img src="img/Servise/direction.jpg" />
-							<!-- <p>
+							<p>
 								サイトの仕様が決まっていないお客様でも安心してご利用いただけるように、お客様のイメージに沿ったご提案をさせていただきます。<br />
 								また、仕様変更にも柔軟に対応し、満足いただけるよう尽力いたします。
-							</p> -->
+							</p>
 						</div>
 					</section>
 				</li>
@@ -85,35 +86,88 @@
 								<h2>Works</h2>
 							</div>
 							<div class="Works_box">
-								<a id="modalOpen" class="modalOpen">
-									<img src="img/Works/sing.jpg" alt="room" />
+								<a class="modalOpen" href="" data-target="modal01">
+									<img src="img/Works/10baton_HP.png" alt="10baton" />
 								</a>
-								<div id="modal" class="modal">
-									<h2>題名</h2>
-									<img src="img/Works/sing.jpg" alt="room" />
+								<div id="modal01" class="modal js-modal">
+									<h2>株式会社10バトンの公式コーポレートサイトの作成</h2>
+									<a
+										class="rinkOpen"
+										href="https://10baton.com/"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										<img src="img/Works/10baton_HP.png" alt="10baton" />
+									</a>
 									<div class="modalText">
-										<!-- <a
-											>にゃあああああああああ<br />
-											にゃあああああああああ<br />
-											にゃあああああああああ
-										</a> -->
-										<a>
-											ここに文章が入ります。<br />
-											ここに文章が入ります。<br />
-											ここに文章が入ります。
-										</a>
+										<p>
+											コーポレートサイトのディレクション及び設計<br />
+											Vuetifyを使用したサイトの作成を行いました。<br />
+											主にCOMPANYとABOUT部分を担当いたしました。<br />
+											上の画像から公式サイトにアクセスすることができます。
+										</p>
 									</div>
-									<a id="modalClose" class="modalClose">Close</a>
+									<a class="modalClose" href="">Close</a>
 								</div>
 							</div>
 
 							<div class="Works_box">
-								<img src="img/Works/desk.jpg" alt="room" />
+								<a class="modalOpen" href="" data-target="modal02">
+									<img
+										src="mogura-tataki/images/mogura.png"
+										alt="mogura-tataki"
+									/>
+								</a>
+								<div id="modal02" class="modal js-modal">
+									<h2>もぐらたたきゲームの作成</h2>
+									<a
+										class="rinkOpen"
+										href="https://ryokkee.github.io/mogura-tataki/"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										<img
+											src="mogura-tataki/images/mogura.png"
+											alt="mogura-tataki"
+										/>
+									</a>
+									<div class="modalText">
+										<p>
+											プログラミング研修にてもぐらたたきゲームを作成しました。<br />
+											もぐらの表示、クリック時の処理、時間経過後の処理などそれぞれに分けてJavaScriptで処理を行っています。
+										</p>
+									</div>
+
+									<a class="modalClose" href="">Close</a>
+								</div>
 							</div>
+
 							<div class="Works_box">
-								<img src="img/Works/note.jpg" alt="room" />
+								<a class="modalOpen" href="" data-target="modal03">
+									<img src="img/Works/note.jpg" alt="todo-list" />
+								</a>
+								<div id="modal03" class="modal js-modal">
+									<h2>Todoリストの作成</h2>
+									<a
+										class="rinkOpen"
+										href="https://ryokkee.github.io/todo-list/"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										<img src="img/Works/note.jpg" alt="todo-list" />
+									</a>
+									<div class="modalText">
+										<p>
+											プログラミング研修にてTodoリストを作成しました。<br />
+											Vue.jsを使用した機能の追加<br />
+											axiosを導入し、サーバーからデータの取得・更新を行なっております。
+										</p>
+									</div>
+
+									<a class="modalClose" href="">Close</a>
+								</div>
 							</div>
-							<div class="Works_box">
+							<!-- <div class="Works_box">
 								<img src="img/Works/torii.jpg" alt="house" />
 							</div>
 							<div class="Works_box">
@@ -130,23 +184,23 @@
 							</div>
 							<div class="Works_box">
 								<img src="img/Works/caffe.jpg" alt="house" />
-							</div>
+							</div> -->
 							<div id="mask" class="mask"></div>
 						</section>
 					</div>
 				</li>
 
 				<!-- Othersエリア -->
-				<li class="animationTarget">
+				<!-- <li class="animationTarget">
 					<section id="Others">
 						<div class="contentsText">
 							<h2>Others</h2>
-							<!-- <p>
+							<p>
 								ここに文章が入ります。
 								かあああああああああああああああああああああ<br />
 								ああああああああああああああああああああああ<br />
 								ああああああああああああああああああああああああああ
-							</p> -->
+							</p>
 						</div>
 						<div class="Others_box">
 							<a class="rinkOpen" href="http://abehiroshi.la.coocan.jp/">
@@ -167,11 +221,11 @@
 							<p>About</p>
 						</div>
 					</section>
-				</li>
+				</li> -->
 			</ul>
 		</main>
 		<footer>
-			<h1>PortFolio</h1>
+			<h1>Ryosuke Kai</h1>
 			<h2></h2>
 		</footer>
 	</body>
